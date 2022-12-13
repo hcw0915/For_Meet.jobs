@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %}
+
+<form action="" method="post" class="w-75">
+  {% csrf_token %}
+  <div class="form-row w-100">
+    <div class="form-group col-8 w-75">
+      <input
+        class="form-control"
+        name="restaurant_name"
+        placeholder="請輸入餐廳名稱"
+      />
+    </div>
+    <div class="form-group col-1">
+      <input class="btn btn-danger" type="submit" value="查詢" />
+    </div>
+
+    <div class="form-group col-3">
+      <h6 class="history">
+        上次搜尋 : {% for name in restaurant %} {{ name }} {% endfor %}
+      </h6>
+    </div>
+  </div>
+</form>
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th class="w-10">作者</th>
+      <th class="w-50">標題 ( 點擊標題進入連結 )</th>
+      <th>點擊數</th>
+      <th>文章時間</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for article in articles %}
+    <tr>
+      <td><img src="{{ article.avatar }}" style="border-radius: 50%" /></td>
+      <td>{{article.author}}</td>
+      <td>
+        <a href="{{ article.link }}" target="_blank">{{ article.title }}</a>
+      </td>
+      <td>{{article.hit}}</td>
+      <td>{{article.created_at}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}
