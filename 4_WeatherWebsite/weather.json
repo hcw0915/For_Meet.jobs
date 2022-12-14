@@ -1,0 +1,30 @@
+{
+  "coord": { "lon": -96.7836, "lat": 32.7668 },
+  "weather": [
+    { "id": 711, "main": "Smoke", "description": "smoke", "icon": "50d" }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 303.41,
+    "feels_like": 301.72,
+    "temp_min": 302.05,
+    "temp_max": 305.4,
+    "pressure": 1022,
+    "humidity": 23
+  },
+  "visibility": 10000,
+  "wind": { "speed": 2.57, "deg": 130 },
+  "clouds": { "all": 20 },
+  "dt": 1664302373,
+  "sys": {
+    "type": 2,
+    "id": 2075302,
+    "country": "US",
+    "sunrise": 1664281111,
+    "sunset": 1664324256
+  },
+  "timezone": -18000,
+  "id": 4684904,
+  "name": "Dallasww",
+  "cod": 200
+}
