@@ -1,0 +1,48 @@
+.wrap {
+  width: 90%;
+  margin: auto;
+
+  text-align: center;
+  .title {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid black;
+    padding: 20px;
+    cursor: pointer;
+    h2 {
+      &:hover {
+        color: yellow;
+      }
+    }
+  }
+  .tags {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    .tag-1,
+    .tag-2,
+    .tag-3,
+    .tag-4 {
+      display: none;
+      width: 100%;
+      justify-content: space-evenly;
+      .product {
+        background-color: aqua;
+        // border-radius: 10px;
+        margin: 10px;
+        overflow: hidden;
+        img {
+          scale: 0.9;
+        }
+      }
+    }
+    .toggle {
+      display: flex;
+    }
+  }
+}
+
+.pic {
+}
+.text {
+}

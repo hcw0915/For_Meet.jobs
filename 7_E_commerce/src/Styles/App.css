@@ -1,0 +1,484 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  list-style: none;
+  font-size: 16px;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #393e46;
+}
+
+.header-container {
+  width: 100vw;
+  padding: 0px 20px;
+  margin: auto;
+  height: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #393e46;
+  position: fixed;
+  z-index: 10;
+}
+.header-container nav {
+  display: flex;
+}
+.header-container nav a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.header-container nav a img {
+  height: 55px;
+}
+.header-container nav a p {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 0px;
+  font-family: "Cuprum", sans-serif;
+}
+.header-container nav .toggle-btn {
+  position: absolute;
+  font-weight: 500;
+  top: 26px;
+  right: 26px;
+  scale: 2.2;
+  color: white;
+  display: none;
+}
+.header-container ul {
+  display: flex;
+  margin-bottom: 0;
+}
+.header-container ul .tags {
+  display: flex;
+  font-size: 0;
+  align-items: center;
+}
+.header-container ul .tags a {
+  font-size: 2rem;
+  padding: 0px 25px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.header-container ul .tags a:hover {
+  color: yellow;
+  font-size: 2.02rem;
+}
+.header-container ul .login {
+  display: flex;
+  font-size: 0;
+  align-items: center;
+}
+.header-container ul .login a {
+  font-size: 2rem;
+  padding: 0px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  background-color: yellow;
+  color: black;
+  font-family: "Cuprum", sans-serif;
+}
+.header-container ul .login a:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(83, 154, 247);
+}
+
+@media (max-width: 889px) {
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+  .header-container nav {
+    display: flex;
+    margin: auto;
+  }
+  .header-container nav .toggle-btn {
+    display: inline;
+    top: 23px;
+    right: 23px;
+  }
+  .header-container ul {
+    padding: 0;
+    font-size: 0;
+    width: 100%;
+    background-color: #393e46;
+    justify-content: space-evenly;
+  }
+  .header-container ul .tags {
+    display: none;
+    padding-bottom: 10px;
+  }
+  .header-container ul .active {
+    display: flex;
+  }
+}
+@media (max-width: 640px) {
+  .header-container {
+    padding-top: 7px;
+    background-color: #393e46;
+    display: flex;
+    flex-direction: row;
+  }
+  .header-container nav {
+    display: flex;
+    margin: auto;
+  }
+  .header-container nav a {
+    justify-content: center;
+    align-items: center;
+  }
+  .header-container nav a .toggle-btn {
+    display: flex;
+  }
+  .header-container ul {
+    background-color: #393e46;
+    padding: 0;
+    font-size: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .header-container ul a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(83, 154, 247);
+  }
+}
+.banner {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(118, 118, 118, 0.7), rgba(4, 9, 30, 0.7)), url(../assets/banner/banner1.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  max-width: 100%;
+}
+.banner .text {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.banner .text h1 p {
+  width: 100%;
+  flex-wrap: wrap;
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: "Cuprum", sans-serif;
+}
+.banner .text p {
+  width: 100%;
+  font-size: 3.2rem;
+  font-weight: 400;
+  font-family: "Cuprum", sans-serif;
+}
+.banner .text .red {
+  height: 10vh;
+}
+.banner .text button {
+  position: relative;
+  border-radius: 20px;
+  font-size: 30px;
+  padding: 10px 40px;
+  font-family: "Cuprum", sans-serif;
+  transition: all 0.2s ease;
+  background-color: yellow;
+  color: black;
+  z-index: -1;
+}
+.banner .text button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(83, 154, 247);
+}
+
+.footer {
+  width: 100%;
+  background-color: #393e46;
+  color: white;
+  height: 15vh;
+  padding: 20px 20px;
+}
+.footer .top {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 80%;
+  justify-content: center;
+}
+.footer .top ul {
+  flex: 1;
+  font-size: 20px;
+}
+.footer .top ul li {
+  font-size: 14px;
+  padding: 0;
+}
+.footer .top ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Cuprum", sans-serif;
+}
+.footer .top ul li a:hover {
+  color: yellow;
+}
+.footer .top .info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+.footer .top .info .email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.footer .top .info .email input {
+  width: 30vw;
+  height: 40px;
+  border-radius: 20px 0px 0px 20px;
+  padding: 0px 10px;
+  border: 3px solid white;
+}
+.footer .top .info .email button {
+  width: 80px;
+  height: 40px;
+  border: 3px solid white;
+  border-radius: 0px 20px 20px 0px;
+  background-color: yellow;
+  transition: all 0.2s ease;
+  font-family: "Cuprum", sans-serif;
+}
+.footer .top .info .email button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(83, 154, 247);
+}
+.footer .top .info .item {
+  height: 60px;
+  padding: 10px;
+  display: flex;
+  flex: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.footer .top .info .item .icon {
+  justify-content: end;
+  padding: 10px 20px;
+  scale: 2;
+}
+.footer .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons {
+  width: 85%;
+  height: 400px;
+  margin: auto;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.icons p {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 20%;
+  font-size: 3rem;
+  text-align: center;
+  border-bottom: 1px solid rgb(131, 131, 131);
+  margin-bottom: 50px;
+}
+.icons .icon {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.icons .icon .single {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icons .icon .single i {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 4rem;
+  color: rgb(131, 131, 131);
+  z-index: 1;
+}
+.icons .icon .single h5 {
+  text-align: center;
+  width: 110%;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1.6rem;
+  font-family: "Cuprum", sans-serif;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.main {
+  background: url(../assets/setupvertical/neonbanner.jpg);
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.main .title {
+  padding-top: 10px;
+  text-align: center;
+  color: white;
+}
+.main .title h3 {
+  font-size: 3rem;
+}
+.main .wrap {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  border-top: 1px solid white;
+}
+.main .wrap .cards {
+  min-width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.main .wrap .cards .card {
+  background-color: #d4d4d4;
+  color: rgb(53, 53, 53);
+  width: 25%;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin: 20px 0 40px 0;
+  box-shadow: 7px 7px 7px rgb(255, 255, 255);
+  padding: 20px;
+}
+.main .wrap .cards .card:hover {
+  scale: 1.04;
+}
+.main .wrap .cards .card img {
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.main .wrap .cards .card .text {
+  padding: 0 3px;
+}
+.main .wrap .cards .card button {
+  width: 100%;
+  height: 35px;
+  margin: auto;
+  border: none;
+  border-radius: 10px;
+  background-color: yellow;
+  transition: all 0.25s ease;
+  font-family: "Cuprum", sans-serif;
+}
+.main .wrap .cards .card button:hover {
+  color: white;
+  background-color: rgb(83, 154, 247);
+}
+.main .wrap .cards .green {
+  background: linear-gradient(135deg, rgb(114, 211, 138), rgb(206, 206, 206));
+}
+.main .wrap .cards .blue {
+  background: linear-gradient(135deg, rgb(150, 230, 250), rgb(206, 206, 206));
+}
+.main .wrap .cards .purple {
+  background: linear-gradient(135deg, rgb(232, 185, 253), rgb(206, 206, 206));
+}
+
+@media (max-width: 900px) {
+  .main {
+    background: url(../assets/setupvertical/neonbanner.jpg);
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .main .wrap {
+    width: 80%;
+  }
+  .main .wrap .cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .main .wrap .cards .card {
+    width: 60%;
+    margin: 10px auto;
+  }
+}
+.wrap {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+.wrap .title {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid black;
+  padding: 20px;
+  cursor: pointer;
+}
+.wrap .title h2:hover {
+  color: yellow;
+}
+.wrap .tags {
+  width: 90%;
+  display: flex;
+  margin: auto;
+}
+.wrap .tags .tag-1,
+.wrap .tags .tag-2,
+.wrap .tags .tag-3,
+.wrap .tags .tag-4 {
+  display: none;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.wrap .tags .tag-1 .product,
+.wrap .tags .tag-2 .product,
+.wrap .tags .tag-3 .product,
+.wrap .tags .tag-4 .product {
+  background-color: aqua;
+  margin: 10px;
+  overflow: hidden;
+}
+.wrap .tags .tag-1 .product img,
+.wrap .tags .tag-2 .product img,
+.wrap .tags .tag-3 .product img,
+.wrap .tags .tag-4 .product img {
+  scale: 0.9;
+}
+.wrap .tags .toggle {
+  display: flex;
+}/*# sourceMappingURL=App.css.map */

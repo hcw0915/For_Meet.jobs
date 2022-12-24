@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+  list-style: none;
+  font-size: 16px;
+}
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #393e46;
+}
+
+@mixin pad {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+// body {
+//   height: 200vh;
+// }
+
+@import './Header';
+@import './Banner';
+@import './Footer';
+@import './main';
+@import './Cart';

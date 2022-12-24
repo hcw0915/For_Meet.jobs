@@ -1,0 +1,99 @@
+.footer {
+  width: 100%;
+  background-color: #393e46;
+  color: white;
+  height: 15vh;
+  padding: 20px 20px;
+
+  .top {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+    ul {
+      flex: 1;
+      font-size: 20px;
+      li {
+        font-size: 14px;
+        padding: 0;
+        a {
+          text-decoration: none;
+          color: white;
+          font-family: 'Cuprum', sans-serif;
+          &:hover {
+            color: yellow;
+          }
+        }
+      }
+    }
+    .info {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      flex: 2;
+      .email {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        input {
+          width: 30vw;
+          height: 40px;
+          border-radius: 20px 0px 0px 20px;
+          padding: 0px 10px;
+          border: 3px solid white;
+        }
+        button {
+          width: 80px;
+          height: 40px;
+          border: 3px solid white;
+          border-radius: 0px 20px 20px 0px;
+          background-color: yellow;
+          transition: all 0.2s ease;
+          font-family: 'Cuprum', sans-serif;
+          &:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(83, 154, 247);
+          }
+        }
+      }
+      .item {
+        height: 60px;
+        padding: 10px;
+        display: flex;
+        flex: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        .icon {
+          justify-content: end;
+          padding: 10px 20px;
+          scale: 2;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+    }
+  }
+}
+
+// @media (max-width: 375px) {
+//   .footer {
+//     .email {
+//       width: 50vw;
+//       margin: auto;
+//       input {
+//         padding: 0 20px;
+//       }
+//       button {
+//       }
+//     }
+//   }
+// }
